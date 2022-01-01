@@ -36,3 +36,56 @@ git switch mybranch
 # Get current status
 git status
 ```
+
+## Adding changes
+ - This stepp is different from the **commit** phase. 
+ - When you make changes in the code, the branch you work on becomes different from the master branch. These changes are not visible in the master branch unless you take a series of actions.
+ - The first action is the git add command. This command adds the changes to what is called the **staging area**. 
+ 
+![image](https://user-images.githubusercontent.com/89139139/147848375-842d8495-06ce-485e-96c6-5efa8b5f35b5.png)
+
+```
+# Adding everything in the current directoru
+git add .
+# Adding a specific file
+git add <name of your specific file>
+# Add manually a folder which is NOT shown in the list of commitments
+git add —all <name of your folder>
+```
+
+## Commit changes
+- It is not enough to add your updated files or scripts to the staging area. You also need to “commit” these changes using the git commit command.
+- The important part of the git commit command is the message part. It briefly explains what has been changed or the purpose of this change. 
+- There is not a strict set of rules to write commit messages. 
+
+```
+# Commit plus add a message
+git commit -m <add here your message>
+# Alternativaly you can use this, which will bring you to current status
+# of what changes, you can add a message (via vim for instance) there and save the file
+git commit -a
+```
+
+## Ignoring some files
+- There may be situations where: 
+  - You do not want to share a specific files because of confidentiality reason
+  - The file is too big and Git-based remote server are not meant for this.
+  - There are a lot not useful files such as `.pyc` and `.so`. 
+```
+# Create a file named: .gitignore where the “.” is important
+vim .gitignore
+# Tell Git where the .gitingore file is and how to add files
+git config --global core.excludesfile '~/.gitignore'
+# Add a new file type to gitignore
+echo '.ipynb_checkpoints' >> .gitignore
+```
+- This is an example:
+```
+# Some of my current configuration of .gitignore
+*.ipynb_checkpoints
+*.pyc
+*.pyo
+__pycache__/
+```
+
+## 
