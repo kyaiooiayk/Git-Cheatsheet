@@ -1,9 +1,6 @@
 # Git-Cheatsheet
 Git-Cheatsheet - List of commands/situation you may find yourseld dealing with 
 
-- [Official GitHub Docs](https://docs.github.com/en/github)
-- [How to install Git on Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
 - GitHub is a collaboration platform that helps review and manage codes remotely. - GitLab is the same but is majorly focused on DevOps and CI/CD. 
@@ -88,4 +85,42 @@ echo '.ipynb_checkpoints' >> .gitignore
 __pycache__/
 ```
 
-## 
+## Push the server
+- Pushing your code will save your changes in a remote branch = **master branch**
+- If you were not on a branch this will still work.
+- After your branch is pushed, A **merge request** is asking the maintainer of the project to “merge” your code to the master branch. The maintainer will first review your code. If the changes are OK, your code will be merged. 
+```
+# This will push the changes to the server
+git push
+# If you are not working in a branch
+git push origin master
+```
+- Suppose the file you want to update in git but you made some small changes **locally** that you do **NOT** want to keep anymore. 
+- If you use `git pull` it will throw you an error saying: `Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded'. 
+```
+# Discard local changes to all files, permanently
+git reset –hard
+# Then you can use “git pull” to update your local directory
+git pull
+```
+
+## Pulling from server
+- While you are working on a task in your local branch, there might be some changes in the remote branch.
+- The git pull command is used for making your local branch up to date. You should use the git pull command to update your local working directory with the latest files in the remote branch. 
+```
+# If repository installed locally, this updates it from server
+git pull
+```
+
+## Dealing with errors
+```
+# If it throws an error saying there is another process live
+rm -f .git/index.lock
+```
+
+## References
+
+- https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
+- https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
+- [Official GitHub Docs](https://docs.github.com/en/github)
+- [How to install Git on Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
