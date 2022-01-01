@@ -85,7 +85,7 @@ echo '.ipynb_checkpoints' >> .gitignore
 __pycache__/
 ```
 
-## Push the server
+## Push to the server
 - Pushing your code will save your changes in a remote branch = **master branch**
 - If you were not on a branch this will still work.
 - After your branch is pushed, A **merge request** is asking the maintainer of the project to “merge” your code to the master branch. The maintainer will first review your code. If the changes are OK, your code will be merged. 
@@ -103,6 +103,16 @@ git reset –hard
 # Then you can use “git pull” to update your local directory
 git pull
 ```
+## Push to the server failed because of large file (even after deletion)
+- You have to option here: squashing or filter-branch. The latter seems to better because it does not mess with the entire history. [Ref](https://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted)
+    - Locally delete or modify (reduce) large files.
+    - Commit the local deletes.
+    - Soft reset back X number of commits: `git reset --soft HEAD~X`.
+    - Then recommit all the changes together (AKA squash) `git commit -m "New message for the combined commit"`
+    - Push squashed commit.
+
+## Hot to force push
+- If you get an error like this: `Git push failed, "Non-fast forward updates were rejected"'. Then you can use `git push --force` to force push your changes to the server. You need to push about what you are doing and this may not be ideal when working in large projects where others are involved.
 
 ## Pulling from server
 - While you are working on a task in your local branch, there might be some changes in the remote branch.
