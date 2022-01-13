@@ -14,6 +14,16 @@ git clone https://gitlab.com/*******
 git clone git@gitlab.com:*******
 ```
 
+## Clone, venv and installing requirements
+- This is how to start using a git project:
+```
+$ git clone https://github.com/username/project_name.git
+$ cd project_name
+$ virtualenv -p python3 my_venv_name
+$ source my_venv_name/bin/activate
+$(my_venv_name) pip install -r requirements.txt
+```
+
 ## Branch
 - Once you clone the project to your local machine, you only have the **master branch**. 
 - You should make all the changes on a new branch that can be created using the git **branch command**. 
