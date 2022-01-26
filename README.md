@@ -5,6 +5,11 @@ Git-Cheatsheet - List of commands/situation you may find yourseld dealing with
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
 - GitHub is a collaboration platform that helps review and manage codes remotely. - GitLab is the same but is majorly focused on DevOps and CI/CD. 
 
+## How to change your email and username
+- Your name and email address are configured automatically based on your username and hostname. 
+- To change this defaul option, run the following command and follow the instructions in your editor to edit your configuration file: `git config --global --edit`
+- After doing this, you may fix the identity used for this commit with: `git commit --amend --reset-author`
+    
 ## Cloning the project
 - This is the case where the repository is created first on GitHub. 
 ```
