@@ -9,7 +9,10 @@ Git-Cheatsheet - List of commands/situation you may find yourseld dealing with
 - Your name and email address are configured automatically based on your username and hostname. 
 - To change this defaul option, run the following command and follow the instructions in your editor to edit your configuration file: `git config --global --edit`
 - After doing this, you may fix the identity used for this commit with: `git commit --amend --reset-author`
-    
+
+## How to change the email and username of old commits?
+- See this link [on stackoverflow](https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi)
+
 ## Cloning the project
 - This is the case where the repository is created first on GitHub. 
 ```
