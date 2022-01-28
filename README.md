@@ -33,6 +33,7 @@ export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
 ## How to delete your commits history?
 - Say you have some sensitive information on your commits history and you'd like to remove them all.
 - One option would be to delete the `.git` folder but this may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the [following](https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github).
+ - Find our which branch you are on (generally either `main` or `master`): `git rev-parse --abbrev-ref HEAD`. Then change the code below accordingly on the branch you are on.
  - Checkout: `git checkout --orphan latest_branch`
  - Add all the files: `git add -A`
  - Commit the changes: `git commit -am "commit message"`
