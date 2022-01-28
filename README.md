@@ -10,6 +10,21 @@ Git-Cheatsheet - List of commands/situation you may find yourseld dealing with
 - To change this defaul option, run the following command and follow the instructions in your editor to edit your configuration file: `git config --global --edit`
 - After doing this, you may fix the identity used for this commit with: `git commit --amend --reset-author`
 
+## How to change the GIT_AUTHOR/COMMITTER_NAME/EMAIL for all your previous commit
+- There are cases where youstart working on your another PC, you push the commits and you then realise you fortgot to update your credentials. If do this what is shown in the remote server is not what you generally see but what git used as a default. This [answer](https://stackoverflow.com/questions/4493936/could-i-change-my-name-and-surname-in-all-previous-commits) on stackoverflow how to ammend this: 
+- Suppose you want to change the `GIT_AUTHOR_NAME` then run this (`-f` is the forced option):
+```
+git filter-branch --commit-filter \
+'if [ "$GIT_AUTHOR_NAME" = "your_old_author_name" ]; then \
+export GIT_AUTHOR_NAME="your_new_name";\
+export GIT_AUTHOR_EMAIL=your_email_addressi@gmail.com;\
+export GIT_COMMITTER_NAME="your_new_name";\
+export GIT_COMMITTER_EMAIL=your_new_name@gmail.com;\
+fi;\
+git commit-tree "$@"' -f
+```
+- Once this is done you want to update the remote server: `git push --all origin --force`
+
 ## How to change the email and username of old commits?
 - See this link [on stackoverflow](https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi)
 
