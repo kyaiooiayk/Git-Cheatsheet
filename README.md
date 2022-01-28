@@ -23,7 +23,13 @@ export GIT_COMMITTER_EMAIL=your_new_name@gmail.com;\
 fi;\
 git commit-tree "$@"' -f
 ```
+- Alternative you can also try this (contrary to the one above there is no if statement it will update everything with no distinction):
+```
+git filter-branch --commit-filter 'export GIT_COMMITTER_NAME="your_new_commiter_name"; \
+export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
+```
 - Once this is done you want to update the remote server: `git push --all origin --force`
+
 
 ## How to change the email and username of old commits?
 - See this link [on stackoverflow](https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi)
