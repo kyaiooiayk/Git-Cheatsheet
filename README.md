@@ -160,7 +160,7 @@ git pull
     - Then recommit all the changes together (AKA squash) `git commit -m "New message for the combined commit"`
     - Push squashed commit.
 
-## Hot to force push
+## How to force push
 - If you get an error like this: `Git push failed, "Non-fast forward updates were rejected"`. Then you can use `git push --force` to force push your changes to the server. You need to push about what you are doing and this may not be ideal when working in large projects where others are involved. [Ref](https://stackoverflow.com/questions/6897600/git-push-failed-non-fast-forward-updates-were-rejected)
 
 ## Pulling from server
