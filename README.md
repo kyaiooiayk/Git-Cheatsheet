@@ -182,6 +182,12 @@ rm -f .git/index.lock
 - From your GitHub account, go to Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fillup the form => click Generate token => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
 - Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly => You are done. However, once you use this taken once, when you are prompted for the password this steo is not generally required.
 
+## Large files
+- GitHub limits the size of files allowed in repositories. To track files beyond this limit, you can use Git Large File Storage.
+- In order to use Git LFS, you'll need to download and install a new program that's **separate** from Git.
+- You can read more about it [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
+
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
