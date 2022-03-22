@@ -172,10 +172,8 @@ git pull
 ```
 
 ## Dealing with errors
-```
-# If it throws an error saying there is another process live
-rm -f .git/index.lock
-```
+- If it throws an error saying there is another process live. Try: zrm -f .git/index.lockz
+- If `git push` hangs after Total, try to increase the maximum size of the buffer with as suggested [here](https://stackoverflow.com/questions/15843937/git-push-hangs-after-total-line): `git config --global http.postBuffer 157286400` then try to push again.
 
 ## Getting your token (password no longer accpeted)
 - From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. You need to add a PAT (Personal Access Token) instead, and you can follow the below method to add a PAT on your system.
