@@ -1,6 +1,5 @@
-# Git-Cheatsheet
 # GIT Cheatsheet
-*List of commands/situation you may find yourselF dealing with.* 
+*List of commands & case studies you may find yourselF dealing with.* 
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
