@@ -1,5 +1,6 @@
 # Git-Cheatsheet
-Git-Cheatsheet - List of commands/situation you may find yourseld dealing with 
+# GIT Cheatsheet
+*List of commands/situation you may find yourselF dealing with.* 
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
@@ -9,7 +10,11 @@ Git-Cheatsheet - List of commands/situation you may find yourseld dealing with
 - If you have a conda virtual environment: `conda install git`
 
 ## How to change your email and username
-- Your name and email address are configured automatically based on your username and hostname. 
+- Your name and email address are configured automatically based on your username and hostname. If this is not done you can always overwrite it with:
+```
+git config --global user.name <your_name>
+git config --global user.email <your_email_address>
+```
 - To change this defaul option, run the following command and follow the instructions in your editor to edit your configuration file: `git config --global --edit`
 - After doing this, you may fix the identity used for this commit with: `git commit --amend --reset-author`
 
@@ -38,11 +43,16 @@ export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
 - One option would be to delete the `.git` folder but this may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the [following](https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github).
  - Find our which branch you are on (generally either `main` or `master`): `git rev-parse --abbrev-ref HEAD`. Then change the code below accordingly on the branch you are on.
  - Checkout: `git checkout --orphan latest_branch`
- - Add all the files: `git add -A`
+ - Add all the files (move it the stage area): `git add -A`
+ - (Alternative you can move a single/folder file): `git add <path_to_specific_file_or_folder>`
  - Commit the changes: `git commit -am "commit message"`
  - Delete the branch: `git branch -D main`
  - Rename the current branch to main: `git branch -m main`
  - Finally, force update your repository: `git push -f origin main`
+
+## How to unstage/delete changes made locally
+- To unstage a file that has been staged but keep the modifications in the working directory:  `git restore --staged <your_file_path>`
+- Alternatively, you can simply delete any modification and restore the previous commit: `git restore <your_file_path>` Restore can be dangerous: anything committed in Git can be recovered in one way or another, but restoring a file will delete the modifications forever.
 
 ## Cloning the project
 - This is the case where the repository is created first on GitHub. 
@@ -64,9 +74,10 @@ $(my_venv_name) pip install -r requirements.txt
 ```
 
 ## Branch
+- Creating a branch is useful because it allows us to freely experiment (generally keep a different model of the code) withouth touching the original code. At a later stage, you can always merged what you have done in the branch version into the main one.
 - Once you clone the project to your local machine, you only have the **master branch**. 
 - You should make all the changes on a new branch that can be created using the git **branch command**. 
-- Your branch is the copy of the master branch. 
+- Your branch is the copy of the master branch/main. 
 - Creating a new branch does not mean that you are working on the new branch. You need to **switch to that branch**.
 ```
 # Create a branch
@@ -74,14 +85,11 @@ git branch mybranch
 # Make sure you swith to this branch
 git switch mybranch
 ```
+- WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
 
 ## Getting the current status
 - To know what branch you are workign on 
-- To show you what changes (if any) they have made 
-```
-# Get current status
-git status
-```
+- To show what changes (if any) have been staged: ```git status```
 
 ## Adding changes
  - This stepp is different from the **commit** phase. 
@@ -191,3 +199,4 @@ git pull
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
 - [Official GitHub Docs](https://docs.github.com/en/github)
 - [How to install Git on Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Quick guide of what VC is and how to use GIT](https://docs.google.com/presentation/d/1_AYIcCyVI59QiiXqU4Sn7VzwtVyfqv-lG36EPFzeSdY/edit#slide=id.gc0ca3f56b2_0_12)
