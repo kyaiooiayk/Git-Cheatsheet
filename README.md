@@ -192,6 +192,10 @@ git pull
 - In order to use Git LFS, you'll need to download and install a new program that's **separate** from Git.
 - You can read more about it [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
 
+## How to delete the cache from another git repository
+- Suppose you have clone a folder inside one of your git repository. If you try to push git will throw you this error message `You've added another git repository inside your current repository.` You now have two options:
+   - Option #1: navigate to the clones repositoy and delete all the hidden files that start wiht `.git` 
+   - Option #2: `git rm --cached <path_of_clone_folder>`
 
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
