@@ -1,12 +1,15 @@
 # GIT Cheatsheet
 *List of commands & case studies you may find yourselF dealing with.* 
+***
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
 - GitHub is a collaboration platform that helps review and manage codes remotely. - GitLab is the same but is majorly focused on DevOps and CI/CD. 
+***
 
 ## How to install git
 - If you have a conda virtual environment: `conda install git`
+***
 
 ## How to change your email and username
 - Your name and email address are configured automatically based on your username and hostname. If this is not done you can always overwrite it with:
@@ -16,6 +19,7 @@ git config --global user.email <your_email_address>
 ```
 - To change this defaul option, run the following command and follow the instructions in your editor to edit your configuration file: `git config --global --edit`
 - After doing this, you may fix the identity used for this commit with: `git commit --amend --reset-author`
+***
 
 ## How to change the `AUTHOR/COMMITTER_NAME` for all your previous commits
 - There are cases where youstart working on your another PC, you push the commits and you then realise you fortgot to update your credentials. If do this what is shown in the remote server is not what you generally see but what git used as a default. This [answer](https://stackoverflow.com/questions/4493936/could-i-change-my-name-and-surname-in-all-previous-commits) on stackoverflow how to ammend this: 
@@ -36,6 +40,7 @@ git filter-branch --commit-filter 'export GIT_COMMITTER_NAME="your_new_commiter_
 export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
 ```
 - Once this is done you want to update the remote server: `git push --all origin --force`
+***
 
 ## How to delete your commits history?
 - Say you have some sensitive information on your commits history and you'd like to remove them all.
@@ -48,10 +53,12 @@ export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
  - Delete the branch: `git branch -D main`
  - Rename the current branch to main: `git branch -m main`
  - Finally, force update your repository: `git push -f origin main`
+***
 
 ## How to unstage/delete changes made locally
 - To unstage a file that has been staged but keep the modifications in the working directory:  `git restore --staged <your_file_path>`
 - Alternatively, you can simply delete any modification and restore the previous commit: `git restore <your_file_path>` Restore can be dangerous: anything committed in Git can be recovered in one way or another, but restoring a file will delete the modifications forever.
+***
 
 ## Cloning the project
 - This is the case where the repository is created first on GitHub. 
@@ -61,6 +68,7 @@ git clone https://gitlab.com/*******
 # Clone with SSH
 git clone git@gitlab.com:*******
 ```
+***
 
 ## Clone, venv and installing requirements
 - This is how to start using a git project:
@@ -71,6 +79,7 @@ $ virtualenv -p python3 my_venv_name
 $ source my_venv_name/bin/activate
 $(my_venv_name) pip install -r requirements.txt
 ```
+***
 
 ## Branch
 - Creating a branch is useful because it allows us to freely experiment (generally keep a different model of the code) withouth touching the original code. At a later stage, you can always merged what you have done in the branch version into the main one.
@@ -85,10 +94,12 @@ git branch mybranch
 git switch mybranch
 ```
 - WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
+***
 
 ## Getting the current status
 - To know what branch you are workign on 
 - To show what changes (if any) have been staged: ```git status```
+***
 
 ## Adding changes
  - This stepp is different from the **commit** phase. 
@@ -105,6 +116,7 @@ git add <name of your specific file>
 # Add manually a folder which is NOT shown in the list of commitments
 git add —all <name of your folder>
 ```
+***
 
 ## Commit changes
 - It is not enough to add your updated files or scripts to the staging area. You also need to “commit” these changes using the git commit command.
@@ -118,6 +130,7 @@ git commit -m <add here your message>
 # of what changes, you can add a message (via vim for instance) there and save the file
 git commit -a
 ```
+***
 
 ## Ignoring some files
 - There may be situations where: 
@@ -140,6 +153,7 @@ echo '.ipynb_checkpoints' >> .gitignore
 *.pyo
 __pycache__/
 ```
+***
 
 ## Push to the server
 - Pushing your code will save your changes in a remote branch = **master branch**
@@ -159,6 +173,8 @@ git reset –hard
 # Then you can use “git pull” to update your local directory
 git pull
 ```
+***
+
 ## Push to the server failed because of large file (even after deletion)
 - You have to option here: squashing or filter-branch. The latter seems to better because it does not mess with the entire history. [Ref](https://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted)
     - Locally delete or modify (reduce) large files.
@@ -166,9 +182,11 @@ git pull
     - Soft reset back X number of commits: `git reset --soft HEAD~X`.
     - Then recommit all the changes together (AKA squash) `git commit -m "New message for the combined commit"`
     - Push squashed commit.
+***
 
 ## How to force push
 - If you get an error like this: `Git push failed, "Non-fast forward updates were rejected"`. Then you can use `git push --force` to force push your changes to the server. You need to push about what you are doing and this may not be ideal when working in large projects where others are involved. [Ref](https://stackoverflow.com/questions/6897600/git-push-failed-non-fast-forward-updates-were-rejected)
+***
 
 ## Pulling from server
 - While you are working on a task in your local branch, there might be some changes in the remote branch.
@@ -177,25 +195,30 @@ git pull
 # If repository installed locally, this updates it from server
 git pull
 ```
+***
 
 ## Dealing with errors
 - If it throws an error saying there is another process live. Try: zrm -f .git/index.lockz
 - If `git push` hangs after Total, try to increase the maximum size of the buffer with as suggested [here](https://stackoverflow.com/questions/15843937/git-push-hangs-after-total-line): `git config --global http.postBuffer 157286400` then try to push again.
+***
 
 ## Getting your token (password no longer accpeted)
 - From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. You need to add a PAT (Personal Access Token) instead, and you can follow the below method to add a PAT on your system.
 - From your GitHub account, go to Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fillup the form => click Generate token => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
 - Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly => You are done. However, once you use this taken once, when you are prompted for the password this steo is not generally required.
+***
 
 ## Large files
 - GitHub limits the size of files allowed in repositories. To track files beyond this limit, you can use Git Large File Storage.
 - In order to use Git LFS, you'll need to download and install a new program that's **separate** from Git.
 - You can read more about it [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
+***
 
 ## How to delete the cache from another git repository
 - Suppose you have clone a folder inside one of your git repository. If you try to push git will throw you this error message `You've added another git repository inside your current repository.` You now have two options:
    - Option #1: navigate to the clones repositoy and delete all the hidden files that start wiht `.git` 
    - Option #2: `git rm --cached <path_of_clone_folder>`
+***
 
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
@@ -203,3 +226,4 @@ git pull
 - [Official GitHub Docs](https://docs.github.com/en/github)
 - [How to install Git on Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [Quick guide of what VC is and how to use GIT](https://docs.google.com/presentation/d/1_AYIcCyVI59QiiXqU4Sn7VzwtVyfqv-lG36EPFzeSdY/edit#slide=id.gc0ca3f56b2_0_12)
+- [Use templates for better Git commit messages](https://engineering.autotrader.co.uk/2018/06/11/use-templates-for-better-commit-messages.html)
