@@ -55,6 +55,10 @@ export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
  - Finally, force update your repository: `git push -f origin main`
 ***
 
+## How to write your commit texts
+- [Use templates for better Git commit messages: a casa stade from Autotrader](https://engineering.autotrader.co.uk/2018/06/11/use-templates-for-better-commit-messages.html)
+***
+
 ## How to unstage/delete changes made locally
 - To unstage a file that has been staged but keep the modifications in the working directory:  `git restore --staged <your_file_path>`
 - Alternatively, you can simply delete any modification and restore the previous commit: `git restore <your_file_path>` Restore can be dangerous: anything committed in Git can be recovered in one way or another, but restoring a file will delete the modifications forever.
