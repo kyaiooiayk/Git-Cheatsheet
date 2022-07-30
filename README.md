@@ -224,6 +224,11 @@ git pull
    - Option #2: `git rm --cached <path_of_clone_folder>`
 ***
 
+## Log
+- Get the last 3 commit messages: `git log -3`
+
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
