@@ -91,13 +91,13 @@ $(my_venv_name) pip install -r requirements.txt
 - You should make all the changes on a new branch that can be created using the git **branch command**. 
 - Your branch is the copy of the master branch/main. 
 - Creating a new branch does not mean that you are working on the new branch. You need to **switch to that branch**.
+- WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
 ```
 # Create a branch
 git branch mybranch
-# Make sure you swith to this branch
+# Make sure you switch to this branch
 git switch mybranch
 ```
-- WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
 ***
 
 ## Getting the current status
@@ -134,6 +134,11 @@ git commit -m <add here your message>
 # of what changes, you can add a message (via vim for instance) there and save the file
 git commit -a
 ```
+***
+
+## Undo commits
+- `git revert <commit>` Git revert undoes the changes back to a specific commit and adds it as a new commit, keeping the log intact. To revert, you need to provide a hash of a specific commit. 
+- `git reset <commit>` You can also undo changes by using the reset command. It reset the changes back to a specific commit, discarding all commits made after. Note: Using reset command is **discouraged** as it modifies your git log history. 
 ***
 
 ## Ignoring some files
@@ -193,12 +198,9 @@ git pull
 ***
 
 ## Pulling from server
-- While you are working on a task in your local branch, there might be some changes in the remote branch.
-- The git pull command is used for making your local branch up to date. You should use the git pull command to update your local working directory with the latest files in the remote branch. 
-```
-# If repository installed locally, this updates it from server
-git pull
-```
+- While you are working on a task in your local branch, there might be some changes in the remote branch. The `git pull` command is used for making your local branch up to date. You should use the git pull command to update your local working directory with the latest files in the remote branch. 
+- By default, the pull command fetches the changes and merges them with the current branch. To rebase, instead of merge, you can add the `--rebase` flag before the remote name and branch: `git pull --rebase origin master`
+
 ***
 
 ## Dealing with errors
