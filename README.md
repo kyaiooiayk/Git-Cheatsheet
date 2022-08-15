@@ -226,6 +226,11 @@ git pull
    - Option #2: `git rm --cached <path_of_clone_folder>`
 ***
 
+## How to unstage changes
+- How to remove the staged files but keep the files: `git rm -r --cached <name of the file to be removed>`
+
+***
+
 ## Log
 - Get the last 3 commit messages: `git log -3`
 
