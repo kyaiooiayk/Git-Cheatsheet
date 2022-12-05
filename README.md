@@ -233,7 +233,11 @@ git pull
 
 ## Log
 - Get the last 3 commit messages: `git log -3`
+***
 
+## CI/CD with GitHub Actions
+- [How to build a CI/CD pipeline with GitHub Actions in four simple steps](https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/)
+- [How to Build MLOps Pipelines with GitHub Actions [Step by Step Guide]](https://neptune.ai/blog/build-mlops-pipelines-with-github-actions-guide)
 ***
 
 ## References
