@@ -214,6 +214,13 @@ git pull
 - Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly => You are done. However, once you use this taken once, when you are prompted for the password this steo is not generally required.
 ***
 
+## Saving token on your Mac
+- Unset any previous credentia storage you are using with: `git config --global --unset credential.helper`
+- Tell tell Git you want to store credentials in the osxkeychain by running the following: `git config --global credential.helper osxkeychain`
+- You can remove an existing password or token stored in the osxkeychain using the following command: `git credential-osxkeychain erase`
+- See this [refence](https://gist.github.com/jonjack/bf295d4170edeb00e96fb158f9b1ba3c) for more.
+***
+
 ## Large files
 - GitHub limits the size of files allowed in repositories. To track files beyond this limit, you can use Git Large File Storage.
 - In order to use Git LFS, you'll need to download and install a new program that's **separate** from Git.
