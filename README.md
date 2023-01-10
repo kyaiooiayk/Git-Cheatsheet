@@ -100,6 +100,12 @@ git switch mybranch
 ```
 ***
 
+## `main` vs. `master`
+- The computer industry's use of the terms master and slave was considered no longer appropriate after the eventis that took place in the summer of 2020. 
+- Amid the many protests and the growing social unrest, these harmful and antiquated terms were no longer considered appropriate.
+- The option is not a default one, GitHub encourage this but does not ban the use.
+***
+
 ## Getting the current status
 - To know what branch you are workign on 
 - To show what changes (if any) have been staged: ```git status```
@@ -255,4 +261,5 @@ git pull
 - [Quick guide of what VC is and how to use GIT](https://docs.google.com/presentation/d/1_AYIcCyVI59QiiXqU4Sn7VzwtVyfqv-lG36EPFzeSdY/edit#slide=id.gc0ca3f56b2_0_12)
 - [Use templates for better Git commit messages](https://engineering.autotrader.co.uk/2018/06/11/use-templates-for-better-commit-messages.html)
 - [Git cheatsheet](https://www.kdnuggets.com/publications/sheets/Git_Cheatsheet_KDnuggets.pdf)
+- [Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
 ***
