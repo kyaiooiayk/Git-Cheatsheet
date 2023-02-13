@@ -9,6 +9,7 @@
 
 ## How to install git
 - If you have a conda virtual environment: `conda install git`
+- On Macs if you are getting this error `xcrun: error: invalid active developer path`, set this discussion [here](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a).
 ***
 
 ## How to change your email and username
