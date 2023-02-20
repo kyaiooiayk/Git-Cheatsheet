@@ -4,7 +4,8 @@
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
-- GitHub is a collaboration platform that helps review and manage codes remotely. - GitLab is the same but is majorly focused on DevOps and CI/CD. 
+- GitHub is a collaboration platform that helps review and manage codes remotely.
+- GitLab is the same but is majorly focused on DevOps and CI/CD. 
 ***
 
 ## How to install git
