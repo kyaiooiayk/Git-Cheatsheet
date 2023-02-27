@@ -8,9 +8,9 @@
 - GitLab is the same but is majorly focused on DevOps and CI/CD. 
 ***
 
-## How to install git
+## How to install `git`
 - If you have a conda virtual environment: `conda install git`
-- On Macs if you are getting this error `xcrun: error: invalid active developer path`, set this discussion [here](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a).
+- On MacOS, if you are getting this error `xcrun: error: invalid active developer path`, set this discussion [here](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a).
 ***
 
 ## How to change your email and username
@@ -59,9 +59,35 @@ export GIT_AUTHOR_EMAIL=your_email_address@gmail.com; git commit-tree "$@"'
 
 ## How to write your commit texts
 - [Use templates for better Git commit messages: a casa stade from Autotrader](https://engineering.autotrader.co.uk/2018/06/11/use-templates-for-better-commit-messages.html)
+- [Here](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) is the template written by Tim Pope:
+
+```
+Capitalized, short (50 chars or less) summary
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase can get confused if you run the
+two together.
+
+Write your commit message in the imperative: “Fix bug” and not “Fixed bug”
+or “Fixes bug.”  This convention matches up with commit messages generated
+by commands like git merge and git revert.
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+
+- Typically a hyphen or asterisk is used for the bullet, followed by a
+  single space, with blank lines in between, but conventions vary here
+
+- Use a hanging indent
+```
 ***
 
 ## How to unstage/delete changes made locally
+- Before we make a commit, we must tell Git what files we want to commit (new untracked files, modified files, or deleted files). This is called staging and uses the add command. 
 - To unstage a file that has been staged but keep the modifications in the working directory:  `git restore --staged <your_file_path>`
 - Alternatively, you can simply delete any modification and restore the previous commit: `git restore <your_file_path>` Restore can be dangerous: anything committed in Git can be recovered in one way or another, but restoring a file will delete the modifications forever.
 ***
@@ -76,7 +102,7 @@ git clone git@gitlab.com:*******
 ```
 ***
 
-## Clone, venv and installing requirements
+## Clone, venv and requirements.txt installation
 - This is how to start using a git project:
 ```
 $ git clone https://github.com/username/project_name.git
@@ -85,6 +111,12 @@ $ virtualenv -p python3 my_venv_name
 $ source my_venv_name/bin/activate
 $(my_venv_name) pip install -r requirements.txt
 ```
+***
+
+## How to check the commits history
+- `git log`
+- `git log --oneline`: shorthand for --pretty=oneline --abbrev-commit used together.
+- `git log --graph`: display an ASCII graph of the branch and merge history beside the log output.
 ***
 
 ## Branch
