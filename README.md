@@ -90,6 +90,7 @@ Further paragraphs come after blank lines.
 - Before we make a commit, we must tell Git what files we want to commit (new untracked files, modified files, or deleted files). This is called staging and uses the add command. 
 - To unstage a file that has been staged but keep the modifications in the working directory:  `git restore --staged <your_file_path>`
 - Alternatively, you can simply delete any modification and restore the previous commit: `git restore <your_file_path>` Restore can be dangerous: anything committed in Git can be recovered in one way or another, but restoring a file will delete the modifications forever.
+- How to remove the staged files but keep the files: `git rm -r --cached <name of the file to be removed>`
 ***
 
 ## Cloning the project
@@ -115,6 +116,7 @@ $(my_venv_name) pip install -r requirements.txt
 
 ## How to check the commits history
 - `git log`
+- `git log -3`: get the last 3 commit messages
 - `git log --oneline`: shorthand for --pretty=oneline --abbrev-commit used together.
 - `git log --graph`: display an ASCII graph of the branch and merge history beside the log output.
 ***
@@ -131,6 +133,10 @@ $(my_venv_name) pip install -r requirements.txt
 git branch mybranch
 # Make sure you switch to this branch
 git switch mybranch
+# Show all the local branches of your repo. The starred branch is your current branch.
+git branch
+# Show the branch you are in 
+git branch --show-current
 ```
 ***
 
@@ -183,19 +189,14 @@ git commit -a
 
 ## Ignoring some files
 - There may be situations where: 
-  - You do not want to share a specific files because of confidentiality reason
-  - The file is too big and Git-based remote server are not meant for this.
-  - There are a lot not useful files such as `.pyc` and `.so`. 
-```
-# Create a file named: .gitignore where the “.” is important
-vim .gitignore
-# Tell Git where the .gitingore file is and how to add files
-git config --global core.excludesfile '~/.gitignore'
-# Add a new file type to gitignore
-echo '.ipynb_checkpoints' >> .gitignore
-```
+ - You do not want to share a specific files because of confidentiality reason
+ - The file is too big and Git-based remote server are not meant for this.
+ - There are a lot not useful files such as `.pyc` and `.so`. 
+ - Create a hidden file named: .gitignore where the “.” is important: `vim .gitignore`
+ - Tell Git where the `.gitingore` file is and how to add files: `git config --global core.excludesfile '~/.gitignore'`
+ - Add a new file type to gitignore: `echo '.ipynb_checkpoints' >> .gitignore`
 - This is an example:
-```
+```shell
 # Some of my current configuration of .gitignore
 *.ipynb_checkpoints
 *.pyc
@@ -271,15 +272,6 @@ git pull
 - Suppose you have clone a folder inside one of your git repository. If you try to push git will throw you this error message `You've added another git repository inside your current repository.` You now have two options:
    - Option #1: navigate to the clones repositoy and delete all the hidden files that start wiht `.git` 
    - Option #2: `git rm --cached <path_of_clone_folder>`
-***
-
-## How to unstage changes
-- How to remove the staged files but keep the files: `git rm -r --cached <name of the file to be removed>`
-
-***
-
-## Log
-- Get the last 3 commit messages: `git log -3`
 ***
 
 ## CI/CD with GitHub Actions
