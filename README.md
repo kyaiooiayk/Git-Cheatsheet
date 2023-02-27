@@ -279,6 +279,13 @@ git pull
 - [How to Build MLOps Pipelines with GitHub Actions [Step by Step Guide]](https://neptune.ai/blog/build-mlops-pipelines-with-github-actions-guide)
 ***
 
+## Tagging
+- Listing the existing tags in Git is straightforward: `git tag`
+- Listing the existing tags with a particular patter: `git tag -l "v1.8.5*"`
+- Create a tag along with a commit message: `git tag -a v1.4 -m "my version 1.4"`
+- See more [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
