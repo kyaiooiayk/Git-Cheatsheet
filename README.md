@@ -3,8 +3,36 @@
 ***
 
 # Table of content
-- [Git, GitHub and GitLab](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#git-github-and-gitlab)
-- [How to install Git](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#how-to-install-git)
+- [Git, GitHub and GitLab](#git-github-and-gitlab)
+- [How to install Git](#how-to-install-git)
+- [How to change your email and username](#how-to-change-your-email-and-username)
+- [How to change the `AUTHOR/COMMITTER_NAME` for all your previous commits](#how-to-change-the-authorcommitter_name-for-all-your-previous-commits)
+- [How to delete your commits history?](#how-to-delete-your-commits-history)
+- [How to write your commit texts](#how-to-write-your-commit-texts)
+- [How to unstage/delete changes made locally](#how-to-unstagedelete-changes-made-locally)
+- [Cloning the project](#cloning-the-project)
+- [Clone, venv and requirements.txt installation](#clone-venv-and-requirementstxt-installation)
+- [How to check the commits history](#how-to-check-the-commits-history)
+- [Branch](#branch)
+- [`main vs. `master`](#main-vs-master)
+- [Getting the current status](#getting-the-current-status)
+- [Adding changes](#adding-changes)
+- [Commit changes](#commit-changes)
+- [Undo commits](#undo-commits)
+- [Ignoring some files](#ignoring-some-files)
+- [Push to the server](#push-to-the-server)
+- [How to force push](#how-to-force-push)
+- [Pulling from server](#pulling-from-server)
+- [Dealing with errors](#dealing-with-errors)
+- [Password no longer accepted](#getting-your-token-password-no-longer-accepted)
+- [Saving your tokeen on your Mac](#saving-token-on-your-mac)
+- [How to push large files](#large-files)
+- [How to delete the cache from another git repository](#how-to-delete-the-cache-from-another-git-repository)
+- [CI/CD with GitHub Actions](#cicd-with-github-actions)
+- [Tagging](#tagging)
+- [How to add SSH key]()
+
+***
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
