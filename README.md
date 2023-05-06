@@ -318,6 +318,11 @@ git pull
 - See more [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 ***
 
+## How to add SSH key
+- [How to Add SSH Keys to Your GitHub Account](https://www.inmotionhosting.com/support/server/ssh/how-to-add-ssh-keys-to-your-github-account/)
+***
+
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
