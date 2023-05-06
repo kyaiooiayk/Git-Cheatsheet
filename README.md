@@ -3,7 +3,8 @@
 ***
 
 # Table of content
-- [Git, GitHub and GitLab](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#git-github-and-gitlab-1)
+- [Git, GitHub and GitLab](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#git-github-and-gitlab)
+- [How to install Git](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#how-to-install-git)
 
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
