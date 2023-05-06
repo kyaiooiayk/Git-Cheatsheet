@@ -2,6 +2,9 @@
 *List of commands & case studies you may find yourselF dealing with.* 
 ***
 
+# Table of content
+- [Git, GitHub and GitLab](https://github.com/kyaiooiayk/Git-Cheatsheet/edit/main/README.md#git-github-and-gitlab-1)
+
 ## Git, GitHub and GitLab
 - **GIT** stands for Global Information Tracker. - GitHub and GitLab are remote server repositories based on GIT.
 - GitHub is a collaboration platform that helps review and manage codes remotely.
