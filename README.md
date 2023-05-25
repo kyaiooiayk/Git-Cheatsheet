@@ -14,7 +14,7 @@
 - [Clone, venv and requirements.txt installation](#clone-venv-and-requirementstxt-installation)
 - [How to check the commits history](#how-to-check-the-commits-history)
 - [Branch](#branch)
-- [`main vs. `master`](#main-vs-master)
+- [`main` vs. `master`](#main-vs-master)
 - [Getting the current status](#getting-the-current-status)
 - [Adding changes](#adding-changes)
 - [Commit changes](#commit-changes)
