@@ -155,22 +155,18 @@ $(my_venv_name) pip install -r requirements.txt
 
 ## Branch
 - Creating a branch is useful because it allows us to freely experiment (generally keep a different model of the code) withouth touching the original code. At a later stage, you can always merged what you have done in the branch version into the main one.
-- Once you clone the project to your local machine, you only have the **master branch**. 
+- Once you clone the project to your local machine, you only have the **main branch**. 
 - You should make all the changes on a new branch that can be created using the git **branch command**. 
 - Your branch is the copy of the master branch/main. 
 - Creating a new branch does not mean that you are working on the new branch. You need to **switch to that branch**.
 - WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
-```
-# Create a branch
-git branch mybranch
-# Make sure you switch to this branch
-git switch mybranch
-# Show all the local branches of your repo. The starred branch is your current branch.
-git branch
-# Show the branch you are in 
-git branch --show-current
-```
-***
+  - Create a branch: `git branch mybranch`
+  - Switch to a new branch: `git switch mybranch`
+  - Show all the local branches of your repo. The starred branch is your current branch: `git branch` or `git branch --show-current`
+  - Show all the remote branches: `git branch -r`
+  - Show all the remote branches with latest commit: `git branch -rv`
+  - Show all new remote banches: first `git fetch`, then see if they visibile `git branch -r`, ultimately `git checkout -t origin/new_remote_branch`
+  ***
 
 ## `main` vs. `master`
 - The computer industry's use of the terms master and slave was considered no longer appropriate after the eventis that took place in the summer of 2020. 
