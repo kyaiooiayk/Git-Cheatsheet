@@ -328,4 +328,5 @@ git pull
 - [Use templates for better Git commit messages](https://engineering.autotrader.co.uk/2018/06/11/use-templates-for-better-commit-messages.html)
 - [Git cheatsheet](https://www.kdnuggets.com/publications/sheets/Git_Cheatsheet_KDnuggets.pdf)
 - [Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
+- [Oh Shit, Git!?!](https://ohshitgit.com/)
 ***
