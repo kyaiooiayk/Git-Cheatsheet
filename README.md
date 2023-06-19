@@ -31,7 +31,7 @@
 - [CI/CD with GitHub Actions](#cicd-with-github-actions)
 - [Tagging](#tagging)
 - [How to add SSH key](#how-to-add-ssh-key)
-
+- [Git hooks](#git-hooks)
 ***
 
 ## Git, GitHub and GitLab
@@ -318,6 +318,11 @@ git pull
 - [How to Add SSH Keys to Your GitHub Account](https://www.inmotionhosting.com/support/server/ssh/how-to-add-ssh-keys-to-your-github-account/)
 ***
 
+## Git Hooks
+- Git Hooks are a built-in feature used to automate tasks/enforce policies.
+- `Pre-push` hooks can be used to prevent pushes to certain branches or run additional tests before pushing. `Post-merge` hooks can be used to perform actions after a merge is completed, such as updating dependencies or generating documentation. These hook scripts are only limited by a developer's imagination.
+- Create directory with `mkdir .git/hooks`. The scripts should be named after the Git Hook event they correspond to (e.g., pre-commit, pre-push, post-merge) and have the appropriate permissions `chmod +x`. Git will automatically execute them at the corresponding events. 
+***
 
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
@@ -329,4 +334,5 @@ git pull
 - [Git cheatsheet](https://www.kdnuggets.com/publications/sheets/Git_Cheatsheet_KDnuggets.pdf)
 - [Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
+- [What are GitHooks](https://githooks.com/)
 ***
