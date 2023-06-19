@@ -322,6 +322,12 @@ git pull
 - Git Hooks are a built-in feature used to automate tasks/enforce policies.
 - `Pre-push` hooks can be used to prevent pushes to certain branches or run additional tests before pushing. `Post-merge` hooks can be used to perform actions after a merge is completed, such as updating dependencies or generating documentation. These hook scripts are only limited by a developer's imagination.
 - Create directory with `mkdir .git/hooks`. The scripts should be named after the Git Hook event they correspond to (e.g., pre-commit, pre-push, post-merge) and have the appropriate permissions `chmod +x`. Git will automatically execute them at the corresponding events. 
+
+## Installing `pre-commit`
+- Install pre-commit with: `pip install pre-commit` and check installation with: `pre-commit --version`
+- Create a file named `.pre-commit-config.yaml`
+- Run `pre-commit install` to set up the git hook scripts
+- Now `pre-commit` will run automatically on `git commit`
 ***
 
 ## References
