@@ -1,0 +1,9 @@
+name_of_folder_youd_do_no_want_to_commit
+*.ipynb_checkpoints
+**/.DS_Store
+**/*.pyc
+**/__pycache__
+**/*.h5
+**/*.csv
+**/*.zip
+**/model.png
