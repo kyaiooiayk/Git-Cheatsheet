@@ -347,4 +347,5 @@ git pull
 - [Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
 - [What are GitHooks](https://githooks.com/)
+- [Git Flow vs. Github Flow](https://www.scaler.com/topics/git/git-flow-vs-github-flow/)
 ***
