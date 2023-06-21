@@ -330,6 +330,11 @@ git pull
 - Now `pre-commit` will run automatically on `git commit`
 ***
 
+## Git flow vs. GitHub flow
+- `GitHub flow` is used when there are no releases for the application and there is regular deployment to production.
+- `Git flow` is more complex than GitHub flow, and is used when the software/application has the concept of the release. When more than one developer is working on the same feature.
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
