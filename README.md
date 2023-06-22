@@ -326,10 +326,17 @@ git pull
 - Create directory with `mkdir .git/hooks`. The scripts should be named after the Git Hook event they correspond to (e.g., pre-commit, pre-push, post-merge) and have the appropriate permissions `chmod +x`. Git will automatically execute them at the corresponding events. 
 
 ## Installing `pre-commit`
+- The idea is to check all my staged files (`git add file_to_stage`). One of the most common check is formatting and compliance against PEP8. The former is done by `black` while the latter is done by `flake8`. If everything passes, the commit is made. If not, then you are requiered to manually ammend the code. Pre-commit are a kind of git hooks.
+
+<img width="613" alt="image" src="https://github.com/kyaiooiayk/Git-Cheatsheet/assets/89139139/380b79c9-abf0-47da-a86a-e500dd9f0b13">
+ 
 - Install pre-commit with: `pip install pre-commit` and check installation with: `pre-commit --version`
-- Create a file named `.pre-commit-config.yaml`
+- Add pre-commit to `requirements.txt` (or `requirements-dev.txt` if you have one)
+- Create a file named `.pre-commit-config.yaml` and fill it with actions you'd  like to perform. | [Template](https://github.com/kyaiooiayk/Git-Cheatsheet/blob/main/repository/.pre-commit-config.yaml)
+- Configure `black` inside the file `pyproject.toml`. | [Template]()
 - Run `pre-commit install` to set up the git hook scripts
 - Now `pre-commit` will run automatically on `git commit`
+- If you wish to run before manually before commit: `pre-commit run -a`
 ***
 
 ## Git flow vs. GitHub flow
@@ -349,4 +356,5 @@ git pull
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
 - [What are GitHooks](https://githooks.com/)
 - [Git Flow vs. Github Flow](https://www.scaler.com/topics/git/git-flow-vs-github-flow/)
+- [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
 ***
