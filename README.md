@@ -332,8 +332,9 @@ git pull
  
 - Install pre-commit with: `pip install pre-commit` and check installation with: `pre-commit --version`
 - Add pre-commit to `requirements.txt` (or `requirements-dev.txt` if you have one)
-- Create a file named `.pre-commit-config.yaml` and fill it with actions you'd  like to perform. | [Template](https://github.com/kyaiooiayk/Git-Cheatsheet/blob/main/repository/.pre-commit-config.yaml)
-- Configure `black` inside the file `pyproject.toml`. | [Template]()
+- Create a file named `.pre-commit-config.yaml` and fill it with actions you'd  like to perform. [Template](https://github.com/kyaiooiayk/Git-Cheatsheet/blob/main/repository/.pre-commit-config.yaml)
+- Configure `black` inside the file `pyproject.toml`. [Template](https://github.com/kyaiooiayk/Git-Cheatsheet/blob/main/repository/pyproject.toml)
+- Configure `Flake8` so it works nicely with `black` in the `.flake8` configuration file. [Template]()
 - Run `pre-commit install` to set up the git hook scripts
 - Now `pre-commit` will run automatically on `git commit`
 - If you wish to run before manually before commit: `pre-commit run -a`
