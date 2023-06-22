@@ -337,7 +337,7 @@ git pull
 - Configure `Flake8` so it works nicely with `black` in the `.flake8` configuration file. [Template]()
 - Run `pre-commit install` to set up the git hook scripts
 - Now `pre-commit` will run automatically on `git commit`
-- If you wish to run before manually before commit: `pre-commit run -a`
+- If you wish to run before manually before commit: `pre-commit run -a` or equivalently: `pre-commit run --all-files` if this is an existing project.
 ***
 
 ## Git flow vs. GitHub flow
