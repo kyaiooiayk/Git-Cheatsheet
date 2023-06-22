@@ -6,13 +6,14 @@ echo "Pushing on GitHub!"
 echo "******************"
 echo "Current pwd:" $PWD
 
+
 echo "******************"
 echo "Get status"
 git status
 
 echo "******************"
-echo "Add all new files"
-git add .
+echo "Which file do you want to stage:" && read FILE_STAGE
+git add $FILE_STAGE
 
 echo "******************"
 echo "Add commit comment" && read COMMENT
