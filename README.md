@@ -19,7 +19,7 @@
 - [Adding changes](#adding-changes)
 - [Commit changes](#commit-changes)
 - [Undo commits](#undo-commits)
-- [Ignoring some files: `.gitignore`](#ignoring-some-files)
+- [Ignoring some files: `.gitignore`](#ignoring-some-files-gitignore)
 - [Push to the server](#push-to-the-server)
 - [How to force push](#how-to-force-push)
 - [Pulling from server](#pulling-from-server)
