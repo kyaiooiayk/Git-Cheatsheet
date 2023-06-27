@@ -235,6 +235,18 @@ __pycache__/
 ```
 ***
 
+## `.gitattributes` vs. `.gitignore`
+- `.gitignore` ignores untracked files, those that haven't been added with git add. Essentially it tells git that by default it shouldn't pay attention to untracked files at a given path.
+- `.gitattributes` are for tracked files.
+- Thais situation is usueful when we want to ignore all PDF fiel but one. That one will be processed with `.gitattributes` and two other could be ignored asper the `.gitignore`.
+- If you put *.pdf in .gitignore, and also use .gitattributes to set up *.pdf with the attributes for LFS tracking, then:
+  - By default, an untracked PDF file will be ignored by git.
+  - To add a new PDF file to the index, you would override the ignore rule with `git add -f`
+  - Once a PDF file exists at a specific path, that path is no longer governed by the ignore rule
+  - Any PDF file you do add will be managed by LFS per the .gitattributes
+  - Any PDF file already in the repo (which would be unaffected by the ignore rule) should be managed by LFS, though if it was committed before the .gitattributes entry it may not be.
+***
+
 ## Push to the server
 - Pushing your code will save your changes in a remote branch = **master branch**
 - If you were not on a branch this will still work.
@@ -358,4 +370,5 @@ git pull
 - [What are GitHooks](https://githooks.com/)
 - [Git Flow vs. Github Flow](https://www.scaler.com/topics/git/git-flow-vs-github-flow/)
 - [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
+- [gitignore vs. gitattributes](https://stackoverflow.com/questions/47219985/gitignore-vs-gitattributes)
 ***
