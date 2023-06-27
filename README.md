@@ -19,7 +19,7 @@
 - [Adding changes](#adding-changes)
 - [Commit changes](#commit-changes)
 - [Undo commits](#undo-commits)
-- [Ignoring some files](#ignoring-some-files)
+- [Ignoring some files: `.gitignore`](#ignoring-some-files)
 - [Push to the server](#push-to-the-server)
 - [How to force push](#how-to-force-push)
 - [Pulling from server](#pulling-from-server)
@@ -217,7 +217,7 @@ git commit -a
 - `git reset <commit>` You can also undo changes by using the reset command. It reset the changes back to a specific commit, discarding all commits made after. Note: Using reset command is **discouraged** as it modifies your git log history. 
 ***
 
-## Ignoring some files
+## Ignoring some files: `.gitignore`
 - There may be situations where: 
  - You do not want to share a specific files because of confidentiality reason
  - The file is too big and Git-based remote server are not meant for this.
