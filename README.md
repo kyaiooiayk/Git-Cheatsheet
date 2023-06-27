@@ -372,4 +372,5 @@ git pull
 - [Git Flow vs. Github Flow](https://www.scaler.com/topics/git/git-flow-vs-github-flow/)
 - [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
 - [gitignore vs. gitattributes](https://stackoverflow.com/questions/47219985/gitignore-vs-gitattributes)
+- [About workflow](https://docs.github.com/en/actions/using-workflows/about-workflows)
 ***
