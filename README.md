@@ -359,6 +359,21 @@ git pull
 - `Git flow` is more complex than GitHub flow, and is used when the software/application has the concept of the release. When more than one developer is working on the same feature.
 ***
 
+## Git head and base
+- The **head** is the branch which you are on; that is, the branch with your changes. To show where the head is pointing to use: `git show` and you should be able to see something like this:
+```shell
+commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, origin/HEAD)
+```
+- The **base** is the branch off which these changes are based.
+***
+
+## Git merged vs. rebase
+- **Merge** a commit that combines all changes of a different branch into the current.
+- **Rebase** allows you to use another branch as the new base for your work. Re-comitting all commits of the current branch onto a different base commit. Rebase is a destructive operation. That means, if you do not apply it correctly, you could lose committed work and/or break the consistency of other developer's repositories.
+- Reverting (as in undoing) a rebase is considerably difficult and/or impossible (if the rebase had conflicts) compared to reverting a merge. If you think there is a chance you will want to revert then use merge.
+- Consider the case where you have two branches `main` and `feature1` where `main` is the base of `feature1`. To add this feature to your `main` branch: `git checkout mian` and `git merge feature1`. But this way a new dummy commit is added. If you want to avoid spaghetti-history you can rebase: `git checkout feature1` and `git rebase main`; then you can: `git checkout main` and `git merge feature1`.
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
@@ -374,4 +389,5 @@ git pull
 - [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
 - [gitignore vs. gitattributes](https://stackoverflow.com/questions/47219985/gitignore-vs-gitattributes)
 - [About workflow](https://docs.github.com/en/actions/using-workflows/about-workflows)
+- [When do you use git rebase  instead of git merge](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
 ***
