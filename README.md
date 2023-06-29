@@ -287,7 +287,16 @@ git pull
 ## Pulling from server
 - While you are working on a task in your local branch, there might be some changes in the remote branch. The `git pull` command is used for making your local branch up to date. You should use the git pull command to update your local working directory with the latest files in the remote branch. 
 - By default, the pull command fetches the changes and merges them with the current branch. To rebase, instead of merge, you can add the `--rebase` flag before the remote name and branch: `git pull --rebase origin master`
+***
 
+## git pull vs. git fetch
+- There are 3 importants locations in a git installtion:
+    - The **working directory** is where a developer actively edits and updates files that Git tracks.
+    - The **local Git repository** is where the history of all commits across all branches are maintained.
+    - The **remote repository** is the place where your code is stored.
+- The key difference between git fetch and pull is that git pull copies changes from a remote repository directly into your working directory, while git fetch does not. The git fetch command only copies changes into your local Git repo. The git pull command does both.
+
+![image](https://github.com/kyaiooiayk/Git-Cheatsheet/assets/89139139/757ea6c8-fadb-4c03-a9ca-e3ecb9c0c0b8)
 ***
 
 ## Dealing with errors
@@ -392,4 +401,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [gitignore vs. gitattributes](https://stackoverflow.com/questions/47219985/gitignore-vs-gitattributes)
 - [About workflow](https://docs.github.com/en/actions/using-workflows/about-workflows)
 - [When do you use git rebase  instead of git merge](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
+- [Git pull vs fetch: What's the difference?](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference)
 ***
