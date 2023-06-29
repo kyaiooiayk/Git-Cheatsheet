@@ -34,8 +34,8 @@
 - [How to add SSH key](#how-to-add-ssh-key)
 - [Git hooks](#git-hooks)
 - [Git flow vs. GitHub flow](#git-flow-vs-github-flow)
-- [Git head nad base](#git-head-and-base)
-- []()
+- [Git head and base](#git-head-and-base)
+- [Git merge vs. rebase](#git-merge-vs-rebase)
 ***
 
 ## Git, GitHub and GitLab
@@ -369,7 +369,7 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - The **base** is the branch off which these changes are based.
 ***
 
-## Git merged vs. rebase
+## Git merge vs. rebase
 - **Merge** a commit that combines all changes of a different branch into the current.
 - **Rebase** allows you to use another branch as the new base for your work. Re-comitting all commits of the current branch onto a different base commit. Rebase is a destructive operation. That means, if you do not apply it correctly, you could lose committed work and/or break the consistency of other developer's repositories.
 - Reverting (as in undoing) a rebase is considerably difficult and/or impossible (if the rebase had conflicts) compared to reverting a merge. If you think there is a chance you will want to revert then use merge.
