@@ -24,6 +24,7 @@
 - [Push to the server](#push-to-the-server)
 - [How to force push](#how-to-force-push)
 - [Pulling from server](#pulling-from-server)
+- [git pull vs. git fetch](#git-pull-vs-git-fetch)
 - [Dealing with errors](#dealing-with-errors)
 - [Password no longer accepted](#getting-your-token-password-no-longer-accepted)
 - [Saving your tokeen on your Mac](#saving-token-on-your-mac)
