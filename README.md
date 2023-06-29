@@ -34,6 +34,8 @@
 - [How to add SSH key](#how-to-add-ssh-key)
 - [Git hooks](#git-hooks)
 - [Git flow vs. GitHub flow](#git-flow-vs-github-flow)
+- [Git head nad base](#git-head-and-base)
+- []()
 ***
 
 ## Git, GitHub and GitLab
