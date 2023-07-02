@@ -37,6 +37,7 @@
 - [Git flow vs. GitHub flow](#git-flow-vs-github-flow)
 - [Git head and base](#git-head-and-base)
 - [Git merge vs. rebase](#git-merge-vs-rebase)
+- [GitHub CLI](#github-cli)
 ***
 
 ## Git, GitHub and GitLab
