@@ -386,6 +386,16 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - Consider the case where you have two branches `main` and `feature1` where `main` is the base of `feature1`. To add this feature to your `main` branch: `git checkout main` and `git merge feature1`. But this way a new dummy commit is added. If you want to avoid spaghetti-history you can rebase: `git checkout feature1` and `git rebase main`; then you can: `git checkout main` and `git merge feature1`.
 ***
 
+## GitHub CLI
+- If on Mac install it with: `brew install gh`
+- Save your token with: `gh auth login`
+- Add your recent changes: `git add <name_of_changed_file>`
+- Add a commit commend: `git commit -m "new_change"`
+- Push: `git push`
+- Create a pull request where by providing the base and branch: `gh pr create -B main -H <branch_name> -f`
+- Merge request with autofil:  `gh pr merge --admin -m`
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
@@ -403,4 +413,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [About workflow](https://docs.github.com/en/actions/using-workflows/about-workflows)
 - [When do you use git rebase  instead of git merge](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
 - [Git pull vs fetch: What's the difference?](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference)
+- [GitHub official command line](https://cli.github.com/manual/)
 ***
