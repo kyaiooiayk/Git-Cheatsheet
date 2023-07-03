@@ -38,6 +38,7 @@
 - [Git head and base](#git-head-and-base)
 - [Git merge vs. rebase](#git-merge-vs-rebase)
 - [GitHub CLI](#github-cli)
+- [Deploy documentation on GitHub pages](#deploy-your-doc-with-github-pages)
 ***
 
 ## Git, GitHub and GitLab
