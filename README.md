@@ -397,6 +397,15 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - Merge request with autofil:  `gh pr merge --admin -m`
 ***
 
+## Deploy your doc with GitHub pages
+- Install `mkdocs` with: `pip install mkdocs`
+- Create a folder called `docs` in your repository and place there all .md files there.
+- Create a `mkdocs.ymal` on your project root directory.
+- Build doctumentation with: `mkdocs buil`
+- Build doctumentation with: `mkdocs serve` and you can have a look at the locally deployed docs.
+- When you are satisfied with it, you can then deploy it to Github pages with: `mkdocs gh-deploy`. This will create an additional branch called `gh-pages` and your docs should then be available.
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
@@ -415,4 +424,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [When do you use git rebase  instead of git merge](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
 - [Git pull vs fetch: What's the difference?](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference)
 - [GitHub official command line](https://cli.github.com/manual/)
+- [Deploy your docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
 ***
