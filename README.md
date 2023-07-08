@@ -290,6 +290,7 @@ git pull
 ## Pulling from server
 - While you are working on a task in your local branch, there might be some changes in the remote branch. The `git pull` command is used for making your local branch up to date. You should use the git pull command to update your local working directory with the latest files in the remote branch. 
 - By default, the pull command fetches the changes and merges them with the current branch. To rebase, instead of merge, you can add the `--rebase` flag before the remote name and branch: `git pull --rebase origin master`
+- Pulling a specific branch: `git pull origin <branch_name>`
 ***
 
 ## git pull vs. git fetch
