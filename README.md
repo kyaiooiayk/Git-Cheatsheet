@@ -169,7 +169,7 @@ $(my_venv_name) pip install -r requirements.txt
 - WARNING! `git switch` is very similar to `git checkout` to the point that they do effectively the same thing. See this discussion [here](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch).
   - Create a branch: `git branch mybranch`
   - Switch to a new branch: `git switch mybranch`
-  - To push into this branch you need to set the upstream branch with: `git push --set-upstream origin >name_of_new_branch>`
+  - To push into this branch you need to set the upstream branch with: `git push --set-upstream origin <name_of_new_branch>`. [Why do we need seto an upstream branch](https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch)
   - Show all the local branches of your repo. The starred branch is your current branch: `git branch` or `git branch --show-current`
   - Show all the remote branches: `git branch -r`
   - Show all the remote branches with latest commit: `git branch -rv`
