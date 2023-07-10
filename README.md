@@ -173,7 +173,7 @@ $(my_venv_name) pip install -r requirements.txt
   - Show all the local branches of your repo. The starred branch is your current branch: `git branch` or `git branch --show-current`
   - Show all the remote branches: `git branch -r`
   - Show all the remote branches with latest commit: `git branch -rv`
-  - Show all new remote banches: first `git fetch`, then see if they visibile `git branch -r`, ultimately `git checkout -t origin/new_remote_branch`
+  - Show all new remote banches: first `git fetch`, then see if they are visibile `git branch -r`, ultimately `git checkout -t origin/new_remote_branch`
   - If you want to delete your new branch locally: `git branch --delete <branchname>`. It should be noted that when you delete a local Git branch, the corresponding remote branch in a repository like GitHub or GitLab remains alive and active. Further steps must be taken to delete remote branches.
   ***
 
