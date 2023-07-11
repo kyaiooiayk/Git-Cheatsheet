@@ -40,6 +40,7 @@
 - [GitHub CLI](#github-cli)
 - [Deploy documentation on GitHub pages](#deploy-your-doc-with-github-pages)
 - [remote vs. origin](#remote-vs-origin)
+- [ssh-vs-http protocols](#ssh-vs-http-protocols)
 ***
 
 ## Git, GitHub and GitLab
