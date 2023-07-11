@@ -39,6 +39,7 @@
 - [Git merge vs. rebase](#git-merge-vs-rebase)
 - [GitHub CLI](#github-cli)
 - [Deploy documentation on GitHub pages](#deploy-your-doc-with-github-pages)
+- [remote vs. origin](#remote-vs-origin)
 ***
 
 ## Git, GitHub and GitLab
