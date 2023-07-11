@@ -402,11 +402,14 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 
 ## Deploy your doc with GitHub pages
 - Install `mkdocs` with: `pip install mkdocs`
-- Create a folder called `docs` in your repository and place there all .md files there.
+- Create a folder called `docs` in your repository and place there all the `.md` files there.
 - Create a `mkdocs.ymal` on your project root directory.
 - Build doctumentation with: `mkdocs buil`
 - Build doctumentation with: `mkdocs serve` and you can have a look at the locally deployed docs.
 - When you are satisfied with it, you can then deploy it to Github pages with: `mkdocs gh-deploy`. This will create an additional branch called `gh-pages` and your docs should then be available.
+***
+
+## remote vs. origin
 ***
 
 ## References
