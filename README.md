@@ -411,6 +411,12 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 ***
 
 ## remote vs. origin
+- When you clone a repository with git clone, it automatically creates a remote connection called origin pointing back to the cloned repository.
+- This is useful for developers creating a local copy of a central repository, since it provides an easy way to pull upstream changes or publish local commits.
+- This behavior is also why most Git-based projects call their central repository origin.
+***
+
+## SSH vs. HTTP protocols
 ***
 
 ## References
@@ -432,4 +438,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [Git pull vs fetch: What's the difference?](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference)
 - [GitHub official command line](https://cli.github.com/manual/)
 - [Deploy your docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
+- [git remote](https://www.atlassian.com/git/tutorials/syncing)
 ***
