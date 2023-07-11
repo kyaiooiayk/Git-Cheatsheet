@@ -39,6 +39,8 @@
 - [Git merge vs. rebase](#git-merge-vs-rebase)
 - [GitHub CLI](#github-cli)
 - [Deploy documentation on GitHub pages](#deploy-your-doc-with-github-pages)
+- [remote vs. origin](#remote-vs-origin)
+- [ssh-vs-http protocols](#ssh-vs-http-protocols)
 ***
 
 ## Git, GitHub and GitLab
@@ -173,6 +175,7 @@ $(my_venv_name) pip install -r requirements.txt
   - Show all the local branches of your repo. The starred branch is your current branch: `git branch` or `git branch --show-current`
   - Show all the remote branches: `git branch -r`
   - Show all the remote branches with latest commit: `git branch -rv`
+  - Show all remote and local branches with: `git branch -a`
   - Show all new remote banches: first `git fetch`, then see if they are visibile `git branch -r`, ultimately `git checkout -t origin/new_remote_branch`
   - If you want to delete your new branch locally: `git branch --delete <branchname>`. It should be noted that when you delete a local Git branch, the corresponding remote branch in a repository like GitHub or GitLab remains alive and active. Further steps must be taken to delete remote branches.
   ***
@@ -401,11 +404,23 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 
 ## Deploy your doc with GitHub pages
 - Install `mkdocs` with: `pip install mkdocs`
-- Create a folder called `docs` in your repository and place there all .md files there.
+- Create a folder called `docs` in your repository and place there all the `.md` files there.
 - Create a `mkdocs.ymal` on your project root directory.
 - Build doctumentation with: `mkdocs buil`
 - Build doctumentation with: `mkdocs serve` and you can have a look at the locally deployed docs.
 - When you are satisfied with it, you can then deploy it to Github pages with: `mkdocs gh-deploy`. This will create an additional branch called `gh-pages` and your docs should then be available.
+***
+
+## remote vs. origin
+- When you clone a repository with git clone, it automatically creates a remote connection called origin pointing back to the cloned repository.
+- This is useful for developers creating a local copy of a central repository, since it provides an easy way to pull upstream changes or publish local commits.
+- This behavior is also why most Git-based projects call their central repository origin.
+***
+
+## SSH vs. HTTP protocols
+- Git supports many ways to reference a remote repository. Two of the easiest ways to access a remote repo are:
+ - via the HTTP protocol: allows easy way to allow anonymous, read-only access to a repository
+ - via SSH protocols: allows easy way to allow anonymous, read-write access to a repository
 ***
 
 ## References
@@ -427,4 +442,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [Git pull vs fetch: What's the difference?](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference)
 - [GitHub official command line](https://cli.github.com/manual/)
 - [Deploy your docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
+- [git remote](https://www.atlassian.com/git/tutorials/syncing)
 ***
