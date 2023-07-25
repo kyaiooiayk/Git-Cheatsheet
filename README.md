@@ -27,7 +27,7 @@
 - [git pull vs. git fetch](#git-pull-vs-git-fetch)
 - [Dealing with errors](#dealing-with-errors)
 - [Password no longer accepted](#getting-your-token-password-no-longer-accepted)
-- [Saving your tokeen on your Mac](#saving-token-on-your-mac)
+- [Saving your token on your Mac](#saving-your-token-on-your-mac)
 - [How to push large files](#large-files)
 - [How to delete the cache from another git repository](#how-to-delete-the-cache-from-another-git-repository)
 - [CI/CD with GitHub Actions](#cicd-with-github-actions)
@@ -317,9 +317,11 @@ git pull
 - Click on the Spotlight icon (magnifying glass) on the right side of the menu bar. Type Keychain access then press the Enter key to launch the app => In Keychain Access, search for github.com => Find the internet password entry for github.com => Edit or delete the entry accordingly => You are done. However, once you use this taken once, when you are prompted for the password this step is not generally required.
 ***
 
-## Saving token on your Mac
-- Unset any previous credentia storage you are using with: `git config --global --unset credential.helper`
-- Tell tell Git you want to store credentials in the osxkeychain by running the following: `git config --global credential.helper osxkeychain`
+## Saving your token on your Mac
+- Unset any previous stored credentials you are using with: `git config --global --unset credential.helper`
+- Tell Git you want to store credentials in the osxkeychain by running the following: `git config --global credential.helper osxkeychain`.
+- Navigate to your home directtory and locate your `.gitconfigure` with `ls -a` and check that `helper = osxkeychain` is there.
+- Now interact with Git as you normally would: `git pull <your_ssh_repository>`, put your username and token when prompted. Your token and user name will be automatically saved in keychain.
 - You can remove an existing password or token stored in the osxkeychain using the following command: `git credential-osxkeychain erase`
 - See this [refence](https://gist.github.com/jonjack/bf295d4170edeb00e96fb158f9b1ba3c) for more.
 ***
