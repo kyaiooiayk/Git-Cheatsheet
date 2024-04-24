@@ -5,6 +5,7 @@
 # Table of content
 - [Git, GitHub and GitLab](#git-github-and-gitlab)
 - [How to install Git](#how-to-install-git)
+- [The HEAD the Index and the working directory]()
 - [How to change your email and username](#how-to-change-your-email-and-username)
 - [How to change the `AUTHOR/COMMITTER_NAME` for all your previous commits](#how-to-change-the-authorcommitter_name-for-all-your-previous-commits)
 - [How to delete your commits history?](#how-to-delete-your-commits-history)
@@ -52,6 +53,12 @@
 ## How to install `git`
 - If you have a conda virtual environment: `conda install git`
 - On MacOS, if you are getting this error `xcrun: error: invalid active developer path`, see the discussion [here](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a).
+***
+
+## The HEAD the Index and the working directory
+- The **HEAD**	keeps track of the last commit snapshot, next parent
+- The **Index**	keeps track of the proposed next commit snapshot
+- The **Working Directory**	keeps track of your changes, essentially a sandbox
 ***
 
 ## How to change your email and username
