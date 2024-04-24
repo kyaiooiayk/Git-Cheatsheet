@@ -301,7 +301,8 @@ git pull
     - The **working directory** is where a developer actively edits and updates files that Git tracks.
     - The **local Git repository** is where the history of all commits across all branches are maintained.
     - The **remote repository** is the place where your code is stored.
-- The key difference between git fetch and pull is that git pull copies changes from a remote repository directly into your working directory, while git fetch does not. The git fetch command only copies changes into your local Git repo. The git pull command does both.
+- The key difference between `git fetch` and `git pull` is that git pull copies changes from a remote repository directly into your working directory, while git fetch does not. The git fetch command only copies changes into your local Git repo. The git pull command does both.
+- Git will not update your local clone of the remote, to keep updated or synchronised you have to run `git fetch`. Doing a fetch won’t affect your local branches, so it’s one of the safest git commands you can run.
 
 ![image](https://github.com/kyaiooiayk/Git-Cheatsheet/assets/89139139/757ea6c8-fadb-4c03-a9ca-e3ecb9c0c0b8)
 ***
@@ -445,4 +446,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [GitHub official command line](https://cli.github.com/manual/)
 - [Deploy your docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
 - [git remote](https://www.atlassian.com/git/tutorials/syncing)
+- [is your branch up-to-date?](https://jamesjoshuahill.github.io/note/2015/02/07/is-your-branch-up-to-date/)
 ***
