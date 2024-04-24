@@ -278,7 +278,7 @@ git pull
 ***
 
 ## Push to the server failed because of large file (even after deletion)
-- You have to option here: squashing or filter-branch. The latter seems to better because it does not mess with the entire history. [Ref](https://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted)
+- You have two options here: squashing or filter-branch. The latter seems to be better because it does not mess with the entire history. [Ref](https://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted)
     - Locally delete or modify (reduce) large files.
     - Commit the local deletes.
     - Soft reset back X number of commits: `git reset --soft HEAD~X`.
