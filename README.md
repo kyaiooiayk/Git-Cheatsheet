@@ -5,7 +5,7 @@
 # Table of content
 - [Git, GitHub and GitLab](#git-github-and-gitlab)
 - [How to install Git](#how-to-install-git)
-- [The HEAD the Index and the working directory]()
+- [The HEAD the Index and the working directory](#the-head-the-index-and-the-working-directory)
 - [How to change your email and username](#how-to-change-your-email-and-username)
 - [How to change the `AUTHOR/COMMITTER_NAME` for all your previous commits](#how-to-change-the-authorcommitter_name-for-all-your-previous-commits)
 - [How to delete your commits history?](#how-to-delete-your-commits-history)
