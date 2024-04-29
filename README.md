@@ -429,8 +429,7 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 
 ## SSH vs. HTTP protocols
 - Git supports many ways to reference a remote repository. Two of the easiest ways to access a remote repo are:
- - via the HTTP protocol: allows easy way to allow anonymous, read-only access to a repository
- - via SSH protocols: allows easy way to allow anonymous, read-write access to a repository
+- SSH can compress and transfer data more efficiently than HTTPS, which can improve the speed and bandwidth of your git operations. In addition, SSH can use stronger encryption algorithms and key lengths than HTTPS, reducing the risk of interception or compromise of your data.
 ***
 
 ## References
