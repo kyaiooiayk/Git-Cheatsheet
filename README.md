@@ -43,6 +43,7 @@
 - [remote vs. origin](#remote-vs-origin)
 - [ssh-vs-http protocols](#ssh-vs-http-protocols)
 - [git show](#git-show)
+- [How to write a git commit message](#Rules-on-commit-message)
 ***
 
 ## Git, GitHub and GitLab
@@ -451,6 +452,10 @@ Fix false-negative string comparisons
 
 It turns out that == in Java compares pointers instead of object contents. This has been causing some strings to compare unequal to other strings with identical contents, resulting in intermittent failed logins attempts as well as other issues. Fix the problem by calling .equals() instead.
 ```
+At a bare minimum we have:
+- Commit message begins with a title on its own line and no full stop at the end, followed optionally by a blank line and a longer description.
+- Commit message tile is <= 50 characters and uses an an imperative tone: “Fix foo” instead of “Fixed foo”.
+- The body is line-wrapped at 72 characters and organized into paragraphs
 ***
 
 ## References
