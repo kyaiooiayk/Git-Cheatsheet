@@ -437,6 +437,22 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - If you look inside `.git/` you will notice a folder called `object`. This is where git stores your changeds as an object. Let's you commit a change and you'd like to see if that has been stored correctly, you can do: `$ git show d03e2425cf1c33616e12cb430c69aaa6cc08ff84`
 ***
 
+## Rules on commit message
+- A bad commit message might clearly describe exactly what the commit does and yet fail to explain the commit. Subtle but important. One why to remember this is to explain what you have changed from a high level and the proceed to explain the why.
+
+```
+Use .equals() instead of == for strings
+
+Replace uses of a == b, when a and b are strings, with a.equals(b) in modules foo, bar, and baz.
+```
+vs. 
+```
+Fix false-negative string comparisons
+
+It turns out that == in Java compares pointers instead of object contents. This has been causing some strings to compare unequal to other strings with identical contents, resulting in intermittent failed logins attempts as well as other issues. Fix the problem by calling .equals() instead.
+```
+***
+
 ## References
 - https://www.kdnuggets.com/2021/10/8-git-commands-data-scientists.html 
 - https://www.upgrad.com/blog/github-vs-gitlab-difference-between-github-and-gitlab/ - https://chryswoods.com/beginning_git/README.html
@@ -458,4 +474,5 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 - [Deploy your docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
 - [git remote](https://www.atlassian.com/git/tutorials/syncing)
 - [is your branch up-to-date?](https://jamesjoshuahill.github.io/note/2015/02/07/is-your-branch-up-to-date/)
+- [Lecture notes on version control](https://bernsteinbear.com/isdt/lecture-notes/2-vcs/#lecture-1)
 ***
