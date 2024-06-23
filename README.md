@@ -44,6 +44,7 @@
 - [ssh-vs-http protocols](#ssh-vs-http-protocols)
 - [git show](#git-show)
 - [How to write a git commit message](#Rules-on-commit-message)
+- [Staging files partially](#Staging-files-partially)
 ***
 
 ## Git, GitHub and GitLab
@@ -456,6 +457,11 @@ At a bare minimum we have:
 - Commit message begins with a title on its own line and no full stop at the end, followed optionally by a blank line and a longer description.
 - Commit message tile is <= 50 characters and uses an an imperative tone: “Fix foo” instead of “Fixed foo”.
 - The body is line-wrapped at 72 characters and organized into paragraphs
+***
+
+## Staging files partially
+- The rule is one commit per changes, but what do you do when once change required multiple changes? Doesn’t `git add <file>` force you to put everythong in a single commit?
+- `git add -p` can come to the rescure! Unlike `git add`it lets you partially stage a file. When invoked, it displays each block of modified lines (called a hunk) in sequence and asks you whether or not to stage it10. As usual, a subsequent git commit will include only the staged hunks,
 ***
 
 ## References
