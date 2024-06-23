@@ -42,6 +42,7 @@
 - [Deploy documentation on GitHub pages](#deploy-your-doc-with-github-pages)
 - [remote vs. origin](#remote-vs-origin)
 - [ssh-vs-http protocols](#ssh-vs-http-protocols)
+- [git show](#git-show)
 ***
 
 ## Git, GitHub and GitLab
@@ -430,6 +431,10 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 ## SSH vs. HTTP protocols
 - Git supports many ways to reference a remote repository. Two of the easiest ways to access a remote repo are:
 - SSH can compress and transfer data more efficiently than HTTPS, which can improve the speed and bandwidth of your git operations. In addition, SSH can use stronger encryption algorithms and key lengths than HTTPS, reducing the risk of interception or compromise of your data.
+***
+
+## git show
+- If you look inside `.git/` you will notice a folder called `object`. This is where git stores your changeds as an object. Let's you commit a change and you'd like to see if that has been stored correctly, you can do: `$ git show d03e2425cf1c33616e12cb430c69aaa6cc08ff84`
 ***
 
 ## References
