@@ -437,6 +437,8 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 
 ## git show
 - If you look inside `.git/` you will notice a folder called `object`. This is where git stores your changeds as an object. Let's you commit a change and you'd like to see if that has been stored correctly, you can do: `$ git show d03e2425cf1c33616e12cb430c69aaa6cc08ff84`
+- Who is going to remember this long number, you can omit most of it as long as the first letter you use refer  unambiguously to a commit as in: `git show d03e2`
+- Is there a better way? Yes! With no arguments, git show shows the most recent commit, but `git show HEAD` does the exact same thing.
 ***
 
 ## Rules on commit message
