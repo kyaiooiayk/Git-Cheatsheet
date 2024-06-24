@@ -478,6 +478,7 @@ At a bare minimum we have:
 
 ## git stash
 - `git stash` saves changes from the working tree to a more permanent location called `stash` which does not become part of the Git history. It is intended to store in-progress or experimental changes that you want to temporarily remove from the working tree.
+- `git stash` pop restores a stash entry to the working tree.
 ***
 
 ## References
