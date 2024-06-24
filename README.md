@@ -46,6 +46,7 @@
 - [git diff](#git-diff)
 - [How to write a git commit message](#Rules-on-commit-message)
 - [Staging files partially](#Staging-files-partially)
+- [git stash](#git-stash)
 ***
 
 ## Git, GitHub and GitLab
@@ -473,6 +474,10 @@ At a bare minimum we have:
 ## Staging files partially
 - The rule is one commit per changes, but what do you do when once change required multiple changes? Doesn’t `git add <file>` force you to put everythong in a single commit?
 - `git add -p` can come to the rescure! Unlike `git add`it lets you partially stage a file. When invoked, it displays each block of modified lines (called a hunk) in sequence and asks you whether or not to stage it10. As usual, a subsequent git commit will include only the staged hunks,
+***
+
+## git stash
+- `git stash` saves changes from the working tree to a more permanent location called `stash` which does not become part of the Git history. It is intended to store in-progress or experimental changes that you want to temporarily remove from the working tree.
 ***
 
 ## References
