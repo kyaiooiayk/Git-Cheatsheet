@@ -47,6 +47,7 @@
 - [How to write a git commit message](#Rules-on-commit-message)
 - [Staging files partially](#Staging-files-partially)
 - [git stash](#git-stash)
+- [git blame](#git-blame)
 ***
 
 ## Git, GitHub and GitLab
@@ -479,6 +480,11 @@ At a bare minimum we have:
 ## git stash
 - `git stash` saves changes from the working tree to a more permanent location called `stash` which does not become part of the Git history. It is intended to store in-progress or experimental changes that you want to temporarily remove from the working tree.
 - `git stash` pop restores a stash entry to the working tree.
+***
+
+## git blame
+- `git blame` shows which commit most recently changed each line of the given file.
+- It's useful when you want to know who’s responsible for a specific piece of code.
 ***
 
 ## References
