@@ -166,10 +166,13 @@ $(my_venv_name) pip install -r requirements.txt
 ***
 
 ## How to check the commits history
-- `git log`
-- `git log -3`: get the last 3 commit messages
+- `git log`: gets all the commit history
+- `git log -3`: gets the last 3 commit messages
 - `git log --oneline`: shorthand for --pretty=oneline --abbrev-commit used together.
-- `git log --graph`: display an ASCII graph of the branch and merge history beside the log output.
+- `git log --graph`: displays an ASCII graph of the branch and merge history beside the log output.
+- `git log --p`: shows each commit’s diff, just like `git show`
+- `git log --oneline`: shows each commit in a condensed format on a single line
+- `git log --oneline -- <file name>`: if you are interested in a single file commit history
 ***
 
 ## Branch
