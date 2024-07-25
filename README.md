@@ -405,8 +405,9 @@ commit 541e622e233b664fe5eb2753bf647a9eb0ef678f (HEAD -> main, origin/main, orig
 ***
 
 ## Git merge vs. rebase
-- **Merge** a commit that combines all changes of a different branch into the current.
-- **Rebase** allows you to use another branch as the new base for your work. Re-comitting all commits of the current branch onto a different base commit. Rebase is a destructive operation. That means, if you do not apply it correctly, you could lose committed work and/or break the consistency of other developer's repositories.
+- **Merge** allows you to combine all changes of a different branch into the `main` current.
+- However, consider the scenation where you bronch out and at the same time another developed branched out and merged. Now you'd like to keep your commit history clean and start from the newest merged branched. This has the advantage of keeping your commit history clean which becomes super important when you try to investigate bugs.
+- **Rebase** allows you to use another branch as the new base for your work. Essentially is like saying: "Hey, I want to base my changes on what everybody has already done". Re-comitting all commits of the current branch onto a different base commit. Rebase is a destructive operation. That means, if you do not apply it correctly, you could lose committed work and/or break the consistency of other developer's repositories.
 - Reverting (as in undoing) a rebase is considerably difficult and/or impossible (if the rebase had conflicts) compared to reverting a merge. If you think there is a chance you will want to revert then use merge.
 - Consider the case where you have two branches `main` and `feature1` where `main` is the base of `feature1`. To add this feature to your `main` branch: `git checkout main` and `git merge feature1`. But this way a new dummy commit is added. If you want to avoid spaghetti-history you can rebase: `git checkout feature1` and `git rebase main`; then you can: `git checkout main` and `git merge feature1`.
 ***
