@@ -274,15 +274,16 @@ __pycache__/
 ***
 
 ## Push to the server
-- Pushing your code will save your changes in a remote branch = **master branch**
+- Pushing your code will save your changes in a remote branch = **main branch**
 - If you were not on a branch this will still work.
-- After your branch is pushed, A **merge request** is asking the maintainer of the project to “merge” your code to the master branch. The maintainer will first review your code. If the changes are OK, your code will be merged. 
+- After your branch is pushed, A **merge request** is asking the maintainer of the project to “merge” your code to the main branch. The maintainer will first review your code. If the changes are OK, your code will be merged. 
 ```
 # This will push the changes to the server
 git push
 # If you are not working in a branch
-git push origin master
+git push origin main
 ```
+- If you are wonder what the `origin` stands for - it is the default name for the remote repository from which you cloned your repository.
 - Suppose the file you want to update in git but you made some small changes **locally** that you do **NOT** want to keep anymore. 
 - If you use `git pull` it will throw you an error saying: `Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded'. 
 ```
