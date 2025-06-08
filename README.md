@@ -301,7 +301,10 @@ git pull
     - Commit the local deletes.
     - Soft reset back X number of commits: `git reset --soft HEAD~X`.
     - Then recommit all the changes together (AKA squash) `git commit -m "New message for the combined commit"`
-    - Push squashed commit.
+    - Push squashed commit
+- If none of this works. Simply removing it in a commit will not actually help. This is because Git doesn't actually fully delete the file when you remove it from your working directory. It'll be stored in Git's history incase you want to restore it. Try this: `git filter-branch --force --index-filter \
+  'git rm --cached --ignore-unmatch <path-to-you-large_file>' \
+  --prune-empty --tag-name-filter cat -- --all`
 ***
 
 ## How to force push
