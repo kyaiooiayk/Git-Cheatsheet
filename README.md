@@ -23,7 +23,7 @@
 - [Ignoring some files: `.gitignore`](#ignoring-some-files-gitignore)
 - [`.gitignores` vs. `.gitattributes`](#gitattributes-vs-gitignore)
 - [Push to the server](#push-to-the-server)
-- [Push to the server failed because of large file](#Push-to-the-server-failed-because-of-large-file)
+- [Push to the server failed because of large file (even after deletion)](#Push-to-the-server-failed-because-of-large-file-(even-after-deletion))
 - [How to force push](#how-to-force-push)
 - [Pulling from server](#pulling-from-server)
 - [git pull vs. git fetch](#git-pull-vs-git-fetch)
